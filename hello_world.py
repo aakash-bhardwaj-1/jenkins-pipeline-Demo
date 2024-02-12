@@ -1,6 +1,6 @@
-#!/usr/bin/python3
-#This is Python Program to print hello
+#!/usr/bin/env python3
 
-print("hello World,Git Demo....feb2024_update\n")
+# This is Python Program to print hello
 
+print("hello World, Git Demo....feb2024_update\n")
 
