@@ -7,11 +7,11 @@ echo "3. Multiplication"
 echo "4. Division"
 
 echo -n "Enter First Number: "
-read a
+a=1
 echo -n "Enter Second Number: "
-read b
+b=2
 echo -n "Enter the Choice: "
-read ch
+c=3
 
 case $ch in
    1) res=`expr $a + $b`
