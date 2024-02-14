@@ -27,16 +27,16 @@ pipeline {
 
         stage('Push Docker Images') {
             steps {
-                script{
-                    docker.withRegistry('', 'DockerHubCred') {
-                    sh 'docker tag calculator iiitb/calculator:latest'
-                    sh 'docker push iiitb/calculator'
+                script {
+                    docker.withRegistry('https://index.docker.io/v1/', 'DockerHubCred') {
+                        sh 'docker tag calculator iiitb/calculator:latest'
+                        sh 'docker push iiitb/calculator'
                     }
-                 }
+                }
             }
         }
 
-   stage('Run Ansible Playbook') {
+        stage('Run Ansible Playbook') {
             steps {
                 script {
                     ansiblePlaybook(
@@ -46,6 +46,6 @@ pipeline {
                 }
             }
         }
-
     }
 }
+
