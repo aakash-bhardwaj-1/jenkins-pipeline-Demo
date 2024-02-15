@@ -1,7 +1,7 @@
 all:
   hosts:
-    localhost:
-      ansible_host: aakash
+    127.0.0.1:
+      ansible_connection: local
       ansible_user: aakash
       ansible_ssh_pass: 026452
       ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
